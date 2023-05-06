@@ -1,9 +1,9 @@
 <!DOCTYPE html>  
 <html lang="en">    
-<!-- Description: Japan Uncovered's Feedback Form -->
-<!-- Author: Japan Gurus -->
-<!-- Date: 1 May 2023 -->
-<!-- Validated: Ok 1 May 2023 -->
+	<!-- Description: Japan Uncovered's Feedback Form -->
+	<!-- Author: Japan Gurus -->
+	<!-- Date: 1 May 2023 -->
+	<!-- Validated: Ok 6 May 2023 -->
 <head>    
 	<title>Japan Uncovered's Feedback Form</title>
 	<meta charset="utf-8">
@@ -58,64 +58,106 @@
 
 	<article class="form">
         <h1>Feedback Form</h1>
-		<form>
-		<table>
-			<tr>
-				<td class="qs">Date</td>
-				<td class="ans">
-					<input type="date" id="date" class="date">
-				</td>
-			</tr>
-			<tr>
-				<td class="qs">Did you achieve your goal?</td>
-				<td class="ans">
-					<input type="radio" id="yes" name="goal" value="Yes">
-					<label for="yes">Yes</label>
-					<input type="radio" id="partially" name="goal" value="Partially">
-					<label for="partially">Partially</label>
-					<input type="radio" id="no" name="goal" value="No">
-					<label for="no">No</label>
-				</td>
-			</tr>
-			<tr>
-				<td class="qs">What was the reason of your visit?</td>
-				<td class="ans">
-					<input type="checkbox" id="int" name="reason" value="interested">
-					<label for="interested">I was interested in Japan</label>
-					<br>
-					<input type="checkbox" id="look" name="reason" value="looking">
-					<label for="look">I was looking for a country to travel to</label>
-					<br>
-					<input type="checkbox" id="plan" name="reason" value="travel plan">
-					<label for="plan">I wanted to plan my travel</label>
-					<br>
-					<input type="checkbox" id="rec" name="reason" value="recommended">
-					<label for="rec">I was recommended by others</label>
-				</td>
-			</tr>
-			<tr>
-				<td class="qs">What was the reason if you did not achieve your goal?</td>
-				<td class="ans">
-					<select id="ngoal" name="ngoal">
-						<option value="none">None</option>
-						<option value="work">The website does not work well</option>
-						<option value="lack">The information was lacking</option>
-						<option value="boring">The information was boring</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td class="qs">Do you have any suggestions to make our website better?</td>
-				<td class="ans">
-					<textarea name="sugg" rows="10" cols="50" placeholder="Write your suggestions here..."></textarea>
-				</td>
-			</tr>
-			<tr>
-				<td class="sub" colspan="2">
-					<input type="submit" value="Submit">
-				</td>
-			</tr>
-		</table>
+		<form name="feedback" method="post" action="mailto:japan_gurus123@yahoo.com" enctype="text/plain">
+			<fieldset>
+				<legend>Personal information</legend>
+				<table>
+					<tr>
+						<td class="qs">
+							<label for="name">Name*</label>
+						</td>
+						<td class="ans">
+							<input type="text" id="name" name="Name" placeholder=" Include your first and last name" size="40" required="required" autocomplete="off">
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">
+							<label for="email">Email*</label>
+						</td>
+						<td class="ans">
+							<input type="email" id="email" name="Email Address" placeholder=" Please enter your email address" size="40" required="required" autocomplete="off">
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">Date of visit*</td>
+						<td class="ans">
+							<input type="date" name="Date of visit" required="required">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Questionnaire</legend>
+				<table>
+					<tr>
+						<td class="qs">Did you achieve your goal of visit?</td>
+						<td class="ans">
+							<input type="radio" id="yes" name="Fulfilment of Goal" value="Yes">
+							<label for="yes">Yes</label>
+							<input type="radio" id="partially" name="Fulfilment of Goal" value="Partially">
+							<label for="partially">Partially</label>
+							<input type="radio" id="no" name="Fulfilment of Goal" value="No" >
+							<label for="no">No</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">What were the reasons of your visit?</td>
+						<td class="ans">
+							<input type="checkbox" id="interest" name="Reason of Visit" value="I was interested in Japan">
+							<label for="interest">I was interested in Japan</label>
+							<br>
+							<input type="checkbox" id="look" name="Reason of Visit" value="I was looking for a country to travel to">
+							<label for="look">I was looking for a country to travel to</label>
+							<br>
+							<input type="checkbox" id="plan" name="Reason of Visit" value="I wanted to plan my travel">
+							<label for="plan">I wanted to plan my travel</label>
+							<br>
+							<input type="checkbox" id="rec" name="Reason of Visit" value="I was recommended by others">
+							<label for="rec">I was recommended by others</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">What was the main reason if you did not fully achieve your goal?</td>
+						<td class="ans">
+							<select name="Main reason unable to fully achieve visit goal">
+								<option value="none">None</option>
+								<option value="It was difficult to navigate the website">It was difficult to navigate the website</option>
+								<option value="The information was lacking">The information was lacking</option>
+								<option value="The information was boring">The information was boring</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">Rate your overall experience on a 1-5 scale with 5 being very satisfied and 1 being not satisfied at all.</td>
+						<td class="ans">
+							<label for="temp"> Ratings (1 - 5):</label><br>
+							<input type="range" class="slider" name="Ratings (1 - 5)" min="1" max="5" value="3" list="markers">
+							<datalist id="markers">
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+								<option value="5"></option>
+							</datalist>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Suggestions</legend>
+				<table>
+					<tr>
+						<td class="qs">
+							<label for="suggestion">What improvements or changes would you suggest to further enhance the website?</label>
+						</td>
+						<td class="ans">
+							<textarea name="Suggestions for Improvements" id="suggestion" rows="5" cols="50" placeholder="Write your suggestions here..."></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<p><input type="submit" value="Submit">
+				<input type="reset" value="Reset"></p>
 		</form>
 	</article>
 
