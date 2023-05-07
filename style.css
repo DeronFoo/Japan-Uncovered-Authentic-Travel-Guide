@@ -394,6 +394,7 @@ h4 {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 footer {
     background-color: #ffa2a5;
     width: 100%;
@@ -622,5 +623,4 @@ article.members h1, article.form h1{
     font-size: max(3vw, 25px); /* Set max font-size for responsive text */
     margin-top: max(90px, 6%);
 }
-
 
