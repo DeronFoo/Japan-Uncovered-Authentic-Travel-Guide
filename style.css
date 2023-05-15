@@ -624,3 +624,177 @@ article.members h1, article.form h1{
     margin-top: max(90px, 6%);
 }
 
+
+/* Styles for Secondary Pages */
+/* Styles for slideshow in secondary pages */
+article.content {
+    width: 100%;
+    height: 310vh;
+    position: relative;
+    display:inline-block;
+    text-align: center;
+}
+article.content h1 {
+    position: relative;
+    margin-top: 6%;
+}
+
+.slide-show{    
+    width: 100%;
+    height: 80vh;
+}
+
+.slide-show-elements{
+	position: relative;
+    margin: 0 auto;
+    max-width: 65rem;
+    top: 45%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.5);
+    border-radius: 0.5rem;
+    aspect-ratio: 16/7;
+    height: 90%;
+}
+
+.slideshow{
+    height: 100vh;
+    width: 100%;
+}
+
+/* Styles for previous & next button for slideshow*/
+.navigation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-previous,
+.slide-next {
+  width: 5vw;
+  height: 100%;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  opacity: 0.2;
+}
+
+.slide-previous:hover,
+.slide-next:hover {
+  opacity: 0.7;
+}
+
+/*Styles for the progress bar above the picture slideshow*/
+.progress-bar{
+    position: absolute;
+    top: 0;
+    display: flex; 
+    width: 100%;
+}
+
+.bullet{
+    height: 1.2vh;
+    width: 25%;
+    border: none;
+    background-color: transparent;
+}
+
+/*Styles for progress bar of current picture to show*/
+.showing{
+	background-color:#C9184A;
+}
+
+.content-one{
+    height: 100vh;
+    background: linear-gradient(180deg,#ffa2a5,#FF4D6D);
+    width: 100%;
+}
+
+.content-two{
+    height: 100vh;
+    background: linear-gradient(180deg, #FF4D6D, #A4133C);
+    width: 100%;
+}
+
+.full{
+    width: 100%;
+}
+
+.full .summary{
+	clear: both;
+}
+
+.half{
+    width: 60%;
+    float: left;
+}
+
+.half2{
+    width: 40%;
+    float: left;
+}
+
+.half2 img{
+    width: 90%;
+    float: right;
+}
+
+.full ul li ul{
+    list-style-type: disc;
+    text-align: rigth;
+}
+
+.full ol li{
+    position: relative;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.full ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.full ul ul {
+    margin-left: 1em;
+    padding-left: 2em;
+}
+
+/* Show levels of nested list */
+.full ul li {
+    position: relative;
+    text-align: left;
+}
+
+.full table{
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.full table th, table td{
+    padding: 0.5em;
+    text-align: justify; /* Add this line to justify text */
+    border: 3px solid #590D22; /* Add border style */
+    background-color:#A4133C;
+}
+
+.full table th{
+    background-color:#800F2F;
+    color: #ffffff;
+}
+
+.full table caption{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #d6409c; /* Set caption text color to match border */
+    border: 3px solid #590D22; /* Add border style */
+    padding: 0.5em;
+    background-color: #FFF0F3;
+}
+
